@@ -10,7 +10,7 @@ class Triangle
   def kind
     if (lenght_a + lenght_b) <= lenght_c || (lenght_a + lenght_c) <= lenght_b || (lenght_b + lenght_c) <= lenght_a || (lenght_a * lenght_b * lenght_c == 0)
       begin
-      raise TriangleError
+        raise TriangleError
     elsif lenght_a ==lenght_b && lenght_b == lenght_c
       :equilateral
     elsif lenght_a == lenght_b || lenght_b == lenght_c || lenght_c == lenght_a
@@ -18,12 +18,6 @@ class Triangle
     else
       :scalene
     end
-  end
-  
-  def validate_triangle
-    real_triangle = 
-    [lenght_a, lenght_b, lenght_c].each { |s| real_triangle << false if s <= 0 }
-    raise TriangleError if real_triangle.include?(false)
   end
   
   class TriangleError < StandardError
