@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :lenght_a, :lenght_b, :lenght_c
+  attr_accessor :lenght_a, :lenght_b, :lenght_c, :kind
   
   def initialize(lenght_a, lenght_b, lenght_c)
     @lenght_a = lenght_a
@@ -8,7 +8,7 @@ class Triangle
   end
   
   def kind
-    validate_triangle
+   
     if lenght_a ==lenght_b && lenght_b == lenght_c
       :equilateral
     elsif lenght_a == lenght_b || lenght_b == lenght_c || lenght_c == lenght_a
