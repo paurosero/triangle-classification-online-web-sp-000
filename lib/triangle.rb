@@ -8,7 +8,7 @@ class Triangle
   end
   
   def kind
-    if lenght_a + lenght_b > lenght_c (lenght_a + lenght_c > lenght_b), (lenght_b + lenght_c > lenght_a)
+    if (lenght_a + lenght_b) <= lenght_c || (lenght_a + lenght_c) <= lenght_b || (lenght_b + lenght_c) <= lenght_a || (lenght_a * lenght_b * lenght_c == 0)
     if lenght_a ==lenght_b && lenght_b == lenght_c
       :equilateral
     elsif lenght_a == lenght_b || lenght_b == lenght_c || lenght_c == lenght_a
